@@ -47,8 +47,8 @@ function writeBoardToDocument(node, board) {
   getRowMajor(board).forEach((digit, i) => {
     const cell = document.createElement('div');
     cell.tabIndex = 0;
-    cell.dataset.icol = Math.floor(i / 9);
-    cell.dataset.irow = i % 9;
+    cell.dataset.icol = i % 9;
+    cell.dataset.irow = Math.floor(i / 9);
     cell.className = 'sudoku-cell';
     if (digit !== undefined) {
       cell.innerHTML = digit;
