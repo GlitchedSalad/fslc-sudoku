@@ -1,0 +1,23 @@
+/* TODO: Make the borders between 3x3 subgrids thicker */
+/* matching off data-icol and data-irow may be useful */
+
+.sudoku-grid {
+  display: grid;
+  width: max-content;
+  grid-template-columns: repeat(9, 50px);
+  grid-template-rows: repeat(9, 50px);
+  font-family: monospace;
+  font-size: 16px;
+  border: 2px solid black;
+}
+
+.sudoku-cell {
+  border: 1px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#game-board.board-invalid .sudoku-grid {
+  border-color: red;
+}
