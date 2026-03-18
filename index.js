@@ -21,8 +21,8 @@ const initialBoard = {
 initialBoard.__initialCells = new Set()
 for (let i = 0; i < 81; i++) {
   if (initialBoard.__cells[i] != _){
-      initialBoard.__initialCells.add([i/9|0, i%9])
-    }
+    initialBoard.__initialCells.add([i/9|0, i%9])
+  }
 }
 
 // users of boards should only use these functions
