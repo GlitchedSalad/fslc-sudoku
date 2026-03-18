@@ -18,6 +18,12 @@ const initialBoard = {
   // that were initially filled out and so should not be changed in
   // the withDifferentCell function (you should make that code change too!)
 }
+initialBoard.__initialCells new Set()
+for (let i = 0; i < 81; i++) {
+  if initialBoard.__cells[i] != _:
+    initialBoard.__initialCells.add([i/9|0, i%9])
+}
+
 // users of boards should only use these functions
 function getRowMajor(board) {
   return board.__cells;
