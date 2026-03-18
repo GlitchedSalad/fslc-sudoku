@@ -35,9 +35,19 @@ function getRows(board) {
   });
 }
 // TODO: Implement getColumns and get3x3s. They should return an array of arrays
+
 function getColumns(board) {
   // return something like [[_, 5, _, 2, 6, _, _, 7, _], ...]
-  return [];
+  const columns = [];
+  
+  for (let i = 0; i < 9; i++) {
+    const column = [];
+    for (let ii = 0; ii < 9; ii++) {
+      column.push(board.__cells[(ii * 9) + i]); 
+    }
+    columns.push(column);
+  }
+  return columns;
 }
 function get3x3s(board) {
   // return something like [[_, _, _, 5, 8, 3, _, _, _], ...]
